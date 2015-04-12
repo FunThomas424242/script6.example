@@ -7,6 +7,15 @@
 	<name>Script 8 Example</name>
 	<description>Beispiel zur Ausführung von Skripten unter Java 8	</description>
 
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

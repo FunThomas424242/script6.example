@@ -1,7 +1,5 @@
 package script8.example;
 
-import static org.junit.Assert.*;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
 
