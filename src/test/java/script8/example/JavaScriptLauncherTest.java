@@ -1,5 +1,6 @@
 package script8.example;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -7,8 +8,8 @@ public class JavaScriptLauncherTest {
 	
 	protected JavaScriptLauncher launcher;
 	
-	@BeforeClass
-	public void prepare(){
+	@Before
+	public  void prepare(){
 		launcher=new JavaScriptLauncher();
 	}
 
