@@ -20,7 +20,7 @@ public class JavaScriptLauncher implements Runnable {
 	public void run() {
 		final ScriptEngineManager manager = new ScriptEngineManager();
 		final ScriptEngine engine = manager.getEngineByName("nashorn");
-		
+		final Invocable invocable=(Invocable)engine;
 
 		try {
 			final String template = new String(Files.readAllBytes(Paths
@@ -33,7 +33,7 @@ public class JavaScriptLauncher implements Runnable {
 			
 			final Object json=engine.eval("JSON");
 			System.out.println("Break 3");
-			final Object data=((Invocable)engine).invokeMethod(json,"parse",kontakt);
+			final Object data=invocable.invokeMethod(json,"parse",kontakt);
 			System.out.println("Break 4");
 			
 			engine.eval(new FileReader("src/main/resources/mustache/mustache.js"));
@@ -41,7 +41,7 @@ public class JavaScriptLauncher implements Runnable {
 			final Object mustache=engine.eval("Mustache");
 			System.out.println("Break 6");
 			
-			final Object output=((Invocable)engine).invokeMethod(mustache,"render",template,data);
+			final Object output=invocable.invokeMethod(mustache,"render",template,data);
 			System.out.println("Break 7");
 			System.out.println(output);
 			System.out.println("Break 8");
