@@ -1,4 +1,4 @@
 Telefonnummer von {{kontakt.name}}:
 {{#kontakt.nummern}}
-* {{art}}: {nummer}}
+* {{art}}: {{nummer}}
 {{/kontakt.nummern}}
