@@ -32,7 +32,7 @@ public class JavaScriptLauncher implements Runnable {
 			final Object json=engine.eval("JSON");
 			final Object data=((Invocable)engine).invokeMethod(json,"parse",kontakt);
 			
-			engine.eval(new FileReader("src/main/resources/mustache/mustache.min.js"));
+			engine.eval(new FileReader("src/main/resources/mustache/mustache.js"));
 			final Object mustache=engine.eval("Mustache");
 			
 			final Object output=((Invocable)engine).invokeMethod(mustache,"render",template,data);
