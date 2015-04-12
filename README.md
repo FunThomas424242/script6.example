@@ -1,2 +1,2 @@
-# script6.example
-Beispiele für die Ausführung von Skriptsprachen aus Java 6 heraus.
+# script8.example
+Beispiele für die Ausführung von Skriptsprachen aus Java 8 heraus.

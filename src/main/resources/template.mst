@@ -1,0 +1,4 @@
+Telefonnummer von {{kontakt.name}}:
+{{#kontakt.nummern}}
+* {{art}}: {nummer}}
+{{/kontakt.nummern}}

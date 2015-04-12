@@ -1,0 +1,15 @@
+{
+ "kontakt":{
+   "name":"Thomas Schubert",
+   "nummern":[
+    {
+      "art":"ZuHause",
+      "nummer":"+49 333 555333"
+    },
+    {
+      "art":"Mobil",
+      "nummer":"+49 176 5553333"
+    }
+   ]
+ }
+}
