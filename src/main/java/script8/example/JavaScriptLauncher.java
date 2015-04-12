@@ -25,18 +25,26 @@ public class JavaScriptLauncher implements Runnable {
 		try {
 			final String template = new String(Files.readAllBytes(Paths
 					.get("src/main/resources/template.mst")));
+			System.out.println("Break 1");
 
 			final String kontakt = new String(Files.readAllBytes(Paths
 					.get("src/main/resources/kontakt.json")));
+			System.out.println("Break 2");
 			
 			final Object json=engine.eval("JSON");
+			System.out.println("Break 3");
 			final Object data=((Invocable)engine).invokeMethod(json,"parse",kontakt);
+			System.out.println("Break 4");
 			
 			engine.eval(new FileReader("src/main/resources/mustache/mustache.js"));
+			System.out.println("Break 5");
 			final Object mustache=engine.eval("Mustache");
+			System.out.println("Break 6");
 			
 			final Object output=((Invocable)engine).invokeMethod(mustache,"render",template,data);
+			System.out.println("Break 7");
 			System.out.println(output);
+			System.out.println("Break 8");
 			
 			
 		} catch (IOException | NoSuchMethodException | ScriptException e) {
