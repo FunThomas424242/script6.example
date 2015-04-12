@@ -12,6 +12,8 @@ import javax.script.ScriptException;
 
 public class JavaScriptLauncher implements Runnable {
 
+	protected String output;
+	
 	public static void main(String args[]) {
 		final JavaScriptLauncher launcher = new JavaScriptLauncher();
 		launcher.run();
@@ -46,10 +48,17 @@ public class JavaScriptLauncher implements Runnable {
 			System.out.println(output);
 			System.out.println("Break 8");
 			
+			this.output=(String) output;
+			System.out.println("Break 9");
+			
 			
 		} catch (IOException | NoSuchMethodException | ScriptException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public String getOutput(){
+		return output;
 	}
 
 }
