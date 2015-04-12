@@ -12,7 +12,7 @@ import javax.script.ScriptException;
 
 public class JavaScriptLauncher implements Runnable {
 
-	public void main(String args[]) {
+	public static void main(String args[]) {
 		final JavaScriptLauncher launcher = new JavaScriptLauncher();
 		launcher.run();
 	}
@@ -40,7 +40,6 @@ public class JavaScriptLauncher implements Runnable {
 			
 			
 		} catch (IOException | NoSuchMethodException | ScriptException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
